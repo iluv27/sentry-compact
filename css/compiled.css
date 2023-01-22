@@ -2228,6 +2228,11 @@ input#checkboxLabelFive:checked ~ .box {
   line-height: 1.5rem;
 }
 
+.cookie-text {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -3571,10 +3576,31 @@ input#checkboxLabelFive:checked ~ .box {
   outline: none;
   background-color: #6165f8;
   margin-left: -7px;
+  position: relative;
 }
 
 .input-value::-webkit-slider-runnable-track {
   height: 6px;
+}
+
+.input-value::after {
+  position: absolute;
+  top: 0.6rem;
+  right: 0;
+  z-index: 1000;
+  content: "100%";
+}
+
+.input-value::before {
+  position: absolute;
+  top: 0.6rem;
+  left: 0;
+  z-index: 1000;
+  content: "0%";
+}
+
+.spacer {
+  margin-top: 8rem;
 }
 
 .input-value::-webkit-slider-thumb {
@@ -3587,12 +3613,13 @@ input#checkboxLabelFive:checked ~ .box {
   margin-top: -7px;
   position: relative;
   z-index: 2;
+  cursor: grab;
 }
 
 .track {
   height: 6px;
   width: 100%;
-  background-color: #6f73f9;
+  background-color: #3056d3;
   position: relative;
   top: 18px;
   z-index: 1;
@@ -3678,4 +3705,18 @@ input#checkboxLabelFive:checked ~ .box {
 .progress,
 .preview-container {
   display: none;
+}
+
+.progress {
+  width: 80%;
+  margin: 1rem auto 3rem auto;
+}
+
+.cookies {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%);
+  z-index: 2000;
 }

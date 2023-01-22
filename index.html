@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Compressor</title>
+    <title>Sentry Compact</title>
     <link rel="stylesheet" href="./css/compiled.css">
     <link rel="stylesheet" href="./src/style.css">
+    <link rel="shortcut icon" href="./src/assets/images/image.me.ico" type="image/x-icon" />
+    <script defer src="./src/alpine.min.js"></script>
 </head>
 
 <body>
@@ -52,7 +54,7 @@
         <div class="container mx-auto">
             <div class="relative -mx-4 flex items-center justify-between">
                 <div class="w-60 max-w-full px-4">
-                    <a href="javascript:void(0)" class="block w-full py-5">
+                    <a href="index.html" class="block w-full py-5">
                         <img src="./src/assets/images/image.me.jpg" alt="logo" class="logo" />
                     </a>
                 </div>
@@ -106,16 +108,16 @@
     <!-- ====== Navbar Section End -->
 
     <!-- ====== Hero Section Start -->
-    <div class="relative bg-white pt-[120px] pb-[110px] lg:pt-[150px]">
+    <div class="relative remove bg-white pt-[120px] pb-[110px] lg:pt-[150px]">
         <div class="turnOff container mx-auto">
             <div class="-mx-4 flex flex-wrap">
                 <div class="w-full px-4 lg:w-5/12">
                     <div class="hero-content">
                         <h1
                             class="mb-3 text-4xl font-bold leading-snug text-dark sm:text-[42px] lg:text-[40px] xl:text-[42px]">
-                            Compress and Upscale <br>
+                            Compress<br>
                             any Image with<br />
-                            Isopress
+                            Sentry Compresser
                         </h1>
                         <p class="mb-8 max-w-[480px] text-base text-body-color">
                             Compress your images with ease using Isopress, the powerful image compressor.
@@ -137,12 +139,12 @@
                                     Upload Image
                                 </div>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="javascript:void(0)"
                                     class="inline-flex items-center justify-center py-4 px-6 text-center text-base font-normal text-body-color hover:text-primary sm:px-10 lg:px-8 xl:px-10">
 
-                                    Drag and Drop Anywhere </a>
-                            </li>
+                                    Drag and Drop Anywhere  </a>
+                            </li> -->
                         </ul>
                         <div class="clients pt-16">
                             <h6 class="mb-2 flex items-center text-xs font-normal text-body-color">
@@ -209,6 +211,7 @@
 
 
     <div class="progress">
+        <h3 class="spacer mb-3 text-center font-semibold text-{2xl}">Drag the knob to compress</h3>
         <div class="track"></div>
         <input type="range" class="input-value" min="10" value="40" max="99" step="any">
     </div>
@@ -267,6 +270,17 @@
                     </div>
                 </div>
             </div>
+
+
+            <!-- <div class=" px-4 w-1/4 progress">
+                <div class="mx-auto w-[100px]">
+                    <div class="mb-8 overflow-hidden rounded">
+                        
+                    </div>
+                </div>
+            </div> -->
+
+
             <div class="w-full px-4 md:w-1/2 xl:w-1/3">
                 <div class="top mb-10 overflow-hidden rounded-lg bg-white">
                     <img src="./src/assets/images/compress.jpg" alt="image" class="w-full" />
@@ -339,7 +353,7 @@
         <img src="" alt="">
     </div> -->
 
-    <div class="container mx-auto">
+    <div class="container cookies" id="cookies">
         <div
             class="flex flex-wrap items-center justify-between rounded-lg border border-[#e7e7e7] bg-[#f4f7ff] py-8 px-6 xs:px-10 md:px-8 lg:px-10">
             <div class="w-full md:w-7/12 lg:w-2/3">
@@ -347,20 +361,23 @@
                     <h4 class="mb-1 text-xl font-bold text-black xs:text-2xl md:text-xl lg:text-2xl">
                         We use cookies
                     </h4>
-                    <p class="text-base font-medium text-body-color">
-                        Please, accept these sweeties to continue enjoying our site!
-                    </p>
+                    <p class="cookie-text font-medium text-body-color">
+                        Our website uses cookies to improve your browsing experience. By continuing to use our website,
+                        you consent to our use of cookies. By continuing to use our website, you agree to our use of
+                        cookies in accordance with this Cookie Policy. </p>
                 </div>
             </div>
 
             <div class="w-full md:w-5/12 lg:w-1/3">
                 <div class="flex items-center space-x-3 md:justify-end">
                     <button
-                        class="inline-flex items-center justify-center rounded-md bg-primary py-[10px] px-8 text-center text-base font-semibold text-white hover:bg-opacity-90">
+                        class="gprd inline-flex items-center justify-center rounded-md bg-primary py-[10px] px-8 text-center text-base font-semibold text-white hover:bg-opacity-90"
+                        id="accept">
                         Accept
                     </button>
                     <button
-                        class="inline-flex items-center justify-center rounded-md bg-white py-[10px] px-8 text-center text-base font-semibold text-body-color shadow-card hover:bg-primary hover:text-white">
+                        class="gprd inline-flex items-center justify-center rounded-md bg-white py-[10px] px-8 text-center text-base font-semibold text-body-color shadow-card hover:bg-primary hover:text-white"
+                        id="close">
                         Close
                     </button>
                 </div>

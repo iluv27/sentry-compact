@@ -5,6 +5,43 @@ var input = document.querySelector("#slider-input");
 var inputValue = document.querySelector(".input-value");
 var inputMetedata = document.getElementsByClassName("metadata")[0];
 var outputMetedata = document.getElementsByClassName("metadata")[1];
+const gprdCookies = document.getElementById("cookies");
+const cookiePolicyAccept = document.getElementById("accept");
+const cookiePolicyClose = document.getElementById("close");
+
+window.onload = function () {
+  setTimeout(function () {
+    gprdCookies.style.display = "block";
+  }, 2000);
+};
+// =================================
+// New Codes
+// =================================
+// Add event listeners to handle drag-and-drop events
+document.addEventListener("dragover", function (event) {
+  event.preventDefault();
+  //document.getElementById("drop-area").classList.add("dragover");
+});
+
+document.addEventListener("drop", function (event) {
+  event.preventDefault();
+  var files = event.dataTransfer.files;
+  hiddenButton.files = files;
+});
+
+// Add event listener for file input change
+hiddenButton.addEventListener("change", function () {
+  var file = hiddenButton.files[0];
+  // do something with the file
+});
+
+document.addEventListener("dragleave", function (event) {
+  event.preventDefault();
+  // document.getElementById("drop-area").classList.remove("dragover");
+});
+// =================================
+// New Codes
+// =================================
 
 input.oninput = function () {
   var c = document.getElementsByClassName("top")[0];
@@ -15,6 +52,14 @@ upload.onclick = function () {
   // click on input type file
   hiddenButton.click();
   console.log("Working");
+};
+
+cookiePolicyAccept.onclick = function () {
+  gprdCookies.style.display = "none";
+};
+
+cookiePolicyClose.onclick = function () {
+  gprdCookies.style.display = "none";
 };
 
 hiddenButton.onchange = () => {
@@ -72,6 +117,7 @@ function Compress(q, w, h) {
       document.getElementsByClassName("preview-container")[0].style.display =
         "block";
       document.getElementsByClassName("turnOff")[0].style.display = "none";
+      document.getElementsByClassName("remove")[0].style.display = "none";
       var img = document.createElement("img");
       img.src = url;
       img.onload = function () {
