@@ -9,6 +9,28 @@ const gprdCookies = document.getElementById("cookies");
 const cookiePolicyAccept = document.getElementById("accept");
 const cookiePolicyClose = document.getElementById("close");
 
+document.addEventListener('DOMContentLoaded', function () {
+  // Disable scrolling when the cookie banner is visible
+  document.body.classList.add('no-scroll');
+
+  // When the "Accept" button is clicked
+  document.getElementById('accept').addEventListener('click', function () {
+    // Enable scrolling
+    document.body.classList.remove('no-scroll');
+    // Hide the cookie banner
+    document.getElementById('cookies').style.display = 'none';
+  });
+
+  // When the "Close" button is clicked
+  document.getElementById('close').addEventListener('click', function () {
+    // Enable scrolling
+    document.body.classList.remove('no-scroll');
+    // Hide the cookie banner
+    document.getElementById('cookies').style.display = 'none';
+  });
+});
+
+
 window.onload = function () {
   setTimeout(function () {
     gprdCookies.style.display = "block";
