@@ -80,3 +80,30 @@ body {
   .pricing-first-card{
     background-color: #3b82f6;
   }
+
+  .pricing-card-subtitile {
+    color: #808080c0;
+  }
+
+  .pricing-second-card{
+    background-color: #8080803e;
+  }
+
+  .pricing-button{
+    margin-bottom: 15px;
+  
+   
+  }
+
+  footer{
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #003fa4;
+    font-size: 14px;
+  }
+
+  .footer-subtitle{
+    padding-top: 5px;
+    font-size: 12px;
+  }

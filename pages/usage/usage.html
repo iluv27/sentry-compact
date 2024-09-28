@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn how to use Sentry-Compact, the ultimate free image compressor. Quickly compress images without losing quality. Follow our easy guide."
+    />
+    <meta
+      name="keywords"
+      content="how to use image compressor, image compressor guide, compress images, optimize images, sentry-compact, free image compressor"
+    />
+    <title>How to Use Sentry-Compact Image Compressor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../css/compiled.css" />
+    <link rel="stylesheet" href="./usage.css" />
+
+    <!-- Link to your CSS file -->
+    <link
+      rel="shortcut icon"
+      href="../../src/assets/images/image.me.ico"
+      type="image/x-icon"
+    />
+    <script defer src="../../src/alpine.min.js"></script>
+  </head>
+
+  <body>
+    <!-- ====== Navbar Section Begins -->
+    <header
+      x-data="
+     {
+       navbarOpen: false,
+     }
+   "
+      class="absolute left-0 top-0 z-50 w-full"
+    >
+      <div class="container mx-auto">
+        <div class="relative -mx-4 flex items-center justify-between">
+          <div class="w-60 max-w-full px-4">
+            <a href="index.html" class="block w-full py-5">
+              <img
+                src="../../src/assets/images/image.me.jpg"
+                alt="logo"
+                class="logo"
+              />
+            </a>
+          </div>
+          <div class="flex w-full items-center justify-between px-4">
+            <div>
+              <button
+                @click="navbarOpen = !navbarOpen"
+                :class="navbarOpen && 'navbarTogglerActive'"
+                id="navbarToggler"
+                class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+              >
+                <span
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-body-color"
+                ></span>
+                <span
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-body-color"
+                ></span>
+                <span
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-body-color"
+                ></span>
+              </button>
+              <nav
+                x-transition
+                :class="!navbarOpen && 'hidden'"
+                id="navbarCollapse"
+                class="absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none"
+              >
+                <ul class="block lg:flex">
+                  <li>
+                    <a
+                      href="../../index.html"
+                      class="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="../pricing/pricing.html"
+                      class="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex"
+                    >
+                      Pricing
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      class="flex py-2 text-base font-medium text-dark hover:text-primary lg:ml-12 lg:inline-flex"
+                    >
+                      How to use
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- <div class="hidden justify-end pr-16 sm:flex lg:pr-0">
+                    <a href="javascript:void(0)"
+                        class="py-3 px-7 text-base font-medium text-dark hover:text-primary">
+                        Login
+                    </a>
+                    <a href="javascript:void(0)"
+                        class="rounded-lg bg-primary py-3 px-7 text-base font-medium text-white hover:bg-opacity-90">
+                        Sign Up
+                    </a>
+                </div> -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ====== Navbar Section End -->
+
+    <!-- ====== Main How To Use Section Begins -->
+    <!-- Main Section: Step-by-Step Instructions -->
+    <section class="container mx-auto py-16 lg:pt-[150px] px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold text-gray-800 mb-4">
+          Simple Steps to Compress Your Images
+        </h2>
+        <p class="text-xl text-gray-600">
+          Follow these easy steps to optimize your images quickly with
+          Sentry-Compact.
+        </p>
+      </div>
+
+      <!-- Step-by-Step Guide -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition-transform duration-300"
+        >
+          <img
+            src="../../src/assets/images/step1.png"
+            alt="Upload Image"
+            class="mx-auto mb-4 usage-image1"
+          />
+          <h3 class="text-xl font-semibold text-blue-600">
+            Step 1: Upload Your Image
+          </h3>
+          <p class="text-gray-700 mt-2">
+            Click the "Upload" button to choose the image file you want to
+            compress.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition-transform duration-300"
+        >
+          <img
+            src="../../src/assets/images/step2.png"
+            alt="Compress Image"
+            class="mx-auto mb-4 usage-image"
+          />
+          <h3 class="text-xl font-semibold text-blue-600">
+            Step 2: Compress the Image
+          </h3>
+          <p class="text-gray-700 mt-2">
+            Once uploaded, the image will automatically be compressed without
+            losing quality.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition-transform duration-300"
+        >
+          <img
+            src="../../src/assets/images/step3.png"
+            alt="Download Image"
+            class="mx-auto mb-4 usage-image1"
+          />
+          <h3 class="text-xl font-semibold text-blue-600">
+            Step 3: Download the Image
+          </h3>
+          <p class="text-gray-700 mt-2">
+            Click "Download" to save your compressed image to your device.
+          </p>
+        </div>
+      </div>
+
+      <!-- Call to Action Section -->
+      <div class="text-center call-to-action">
+        <h3 class="text-3xl font-bold text-gray-800">
+          Compress Your Images Now!
+        </h3>
+        <a
+          href="#"
+          class="inline-block bg-blue-600 text-white py-3 px-8 rounded-md text-lg font-semibold hover:bg-blue-700 transition"
+          >Start Compressing</a
+        >
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+
+    <section class="benefits">
+      <h2>Why Use Sentry-Compact?</h2>
+      <p>
+        Discover how our image compression tool can help you save space, speed
+        up your website, and maintain image quality effortlessly.
+      </p>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-compress"></i>
+            <!-- Example icon using FontAwesome -->
+          </div>
+          <h3>Efficient Compression</h3>
+          <p>
+            Compress your images quickly without losing quality, reducing file
+            size by up to 80%.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-tachometer-alt"></i>
+          </div>
+          <h3>Improves Website Speed</h3>
+          <p>
+            Faster loading times mean better user experience and improved SEO
+            rankings.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Time-Saving Automation</h3>
+          <p>
+            Automate your image compression process and save hours of manual
+            work every week.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Secure and Reliable</h3>
+          <p>
+            Your images are processed with high security, ensuring your files
+            are safe at all times.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Completely Free</h3>
+          <p>Enjoy unlimited free compression with no hidden fees.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Fast and Efficient</h3>
+          <p>Compress images in seconds with our speedy tool.</p>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Main How To Use Section Ends -->
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+      <div class="text-center">
+        <p>&copy; 2024 Sentry-Compact. All rights reserved.</p>
+        <p class="footer-subtitle">
+          Optimize your images easily and for free with Sentry-Compact!
+        </p>
+      </div>
+    </footer>
+
+    <input
+      type="file"
+      id="hidden-button"
+      style="display: none"
+      accept="image/*"
+    />
+    <script src="../../src/script.js"></script>
+    <script src="../../src/compressor.js"></script>
+  </body>
+</html>
