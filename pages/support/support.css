@@ -1,0 +1,203 @@
+/* optional */
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/*
+! tailwindcss v3.0.16 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: "";
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+*/
+
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+  tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+footer{
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #003fa4;
+  font-size: 14px;
+}
+
+.footer-subtitle{
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+.main-logo {
+  width: 14rem; /* Adjust this value as needed */
+}
+
+.main-logo img {
+  width: 100%; /* This ensures the image fills the container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+nav ul li a.active {
+    color: #00aaff;
+  }
+
+
+  .support-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .support-content {
+    flex: 1;
+    max-width: 45%;
+  }
+
+  .support-pg{
+margin-bottom: 1rem;
+  }
+
+  .support-heading{
+    padding-bottom: 2rem;
+    position: relative;
+  }
+
+  .support-heading p{
+    color: #808080b7;
+  }
+  
+  .support-image {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .support-image1 {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .support-btn {
+    background-color: #3056D3;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .support-btn:hover {
+    background-color: #0027a7;
+  }
+  
+  .text-container {
+    position: relative;
+  
+}
+
+.coffee-svg1 {
+    position: absolute;
+    top: -40%; /* Start position */
+    left: 10%; /* Start position */
+    width: 50px; /* Adjust size */
+    opacity: 0.8; /* For subtle effect */
+    pointer-events: none; /* Prevent mouse events on the SVG */
+    animation: float1 14s ease-in-out infinite; /* Animation */
+    z-index: -1000;
+}
+
+.coffee-svg2 {
+    position: absolute;
+    top: 20%; /* Start position */
+    left: 70%; /* Start position */
+    width: 100px; /* Adjust size */
+    opacity: 0.2; /* For subtle effect */
+    pointer-events: none; /* Prevent mouse events on the SVG */
+    animation: float 6s ease-in-out infinite; /* Animation */
+}
+
+@keyframes float1 {
+    0% {
+        transform: translate(15px, 10px);
+    }
+    25% {
+        transform: translate(-80px, 40px); /* Adjust for diagonal movement */
+    }
+
+    50% {
+        transform: translate(-40px, 90px); /* Adjust for diagonal movement */
+    }
+    100% {
+        transform: translate(10px, 15px);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-10px, -10px); /* Adjust for diagonal movement */
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}

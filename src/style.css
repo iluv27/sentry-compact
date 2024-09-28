@@ -80,6 +80,16 @@ footer{
   font-size: 12px;
 }
 
+.main-logo {
+  width: 14rem; /* Adjust this value as needed */
+}
+
+.main-logo img {
+  width: 100%; /* This ensures the image fills the container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
 /*
 1. Add the correct height in Firefox.
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
@@ -2195,7 +2205,7 @@ input#checkboxLabelFive:checked ~ .box {
 }
 
 .pb-\[110px\] {
-  padding-bottom: 110px;
+  padding-bottom: 60px;
 }
 
 .pt-16 {
@@ -3486,7 +3496,7 @@ input#checkboxLabelFive:checked ~ .box {
   }
 
   .lg\:pt-\[150px\] {
-    padding-top: 150px;
+    padding-top: 180px;
   }
 
   .lg\:pt-0 {

@@ -72,6 +72,19 @@ body {
     /* 3 */
   }
 
+  .main-logo {
+    width: 14rem; /* Adjust this value as needed */
+  }
+  
+  .main-logo img {
+    width: 100%; /* This ensures the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .usage-sub-heading{
+    color: #6d6d6d;
+   }
+
 footer{
     margin-top: 50px;
     padding-top: 20px;
